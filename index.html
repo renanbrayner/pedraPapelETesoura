@@ -16,9 +16,9 @@
     <main>
         <div class="container">
             <ul>
-                <li class="pedra-background"><div class="pedra"></div></li>
-                <li class="papel-background"><div class="papel"></div></li>
-                <li class="tesoura-background"><div class="tesoura"></div></li>
+                <li class="pedra-background" onclick="humanPlay('pedra')"><div class="pedra" ></div></li>
+                <li class="papel-background" onclick="humanPlay('papel')"><div class="papel" ></div></li>
+                <li class="tesoura-background" onclick="humanPlay('tesoura')"><div class="tesoura" ></div></li>
             </ul>
             <ul>
                 <li class="btn"></li>
@@ -29,8 +29,10 @@
     </main>
     <footer>
         <div class="container">
-            <p class="result">RESULTADO</p>
+            <p class="resultado">RESULTADO</p>
+            <p class="resultado2">RESULTADO</p>
         </div>
     </footer>
+    <script src="main.js"></script>
 </body>
 </html>

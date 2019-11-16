@@ -70,6 +70,7 @@ li {
     margin-top: -10px;
     height: 200px;
     width: 200px;
+    cursor: pointer;
 }
 
 .papel {
@@ -92,6 +93,7 @@ li {
     margin-top: -10px;
     height: 200px;
     width: 200px;
+    cursor: pointer;
 }
 
 .tesoura {
@@ -114,6 +116,7 @@ li {
     margin-top: -10px;
     height: 200px;
     width: 200px;
+    cursor: pointer;
 }
 
 .btn {
