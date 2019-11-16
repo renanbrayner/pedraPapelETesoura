@@ -1,0 +1,62 @@
+/* Global */
+html{
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    background-image: url(images/background.gif);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+body {
+	font-size: 62.5%;
+	margin: 0;
+	padding: 0;
+    }
+
+.container {
+    font-size: 1.6em;
+    padding: 2em 14em;
+    margin: 0 auto;
+}
+/* "Header" */
+
+.title {
+    background: url(/images/PEDRA-PAPEL-E-TESOURA.png) no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 100px;
+    margin: 0px auto;
+    margin-top: 2em;
+}
+
+/* Main */
+
+ul {
+    display: flex;
+    justify-content: space-around;
+
+    list-style-type: none;
+}
+
+li {
+    height: 150px;
+    width: 150px;
+
+}
+
+.pedra {
+    background: url(/images/Cobblestone_Revision_6.png);
+    background-size: cover;
+
+}
+
+.papel {
+    background: url(/images/Paper.png);
+    background-size: cover;
+}
+
+.tesoura {
+    background: url(/images/Shears.png);
+    background-size: cover;
+}
