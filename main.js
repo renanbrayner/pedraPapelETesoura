@@ -45,9 +45,10 @@ function computerPlay() {
     }
 
 function humanPlay(param) {
+    document.querySelector(".resultado").innerHTML = param;
     computerPlay();
     console.log(computer);
-    document.querySelector(".resultado").innerHTML = param;
+    document.querySelector(".resultado3").innerHTML = computer;
     player = param;
     console.log(param);
     
