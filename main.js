@@ -1,7 +1,13 @@
+/* iniciar variaveis */
+
 let computer;
 let player;
 let result;
+let bo5 = [];
+let computerWin = 0;
+let playerWin = 0;
 
+/* Randomizer */
 function computerPlay() {
     let index = Math.ceil(Math.random()*3);
     switch(index) {
@@ -20,6 +26,7 @@ function computerPlay() {
       }
     }
 
+/* Definir quem ganhou */
     function game(round) {
         switch (round) {
             case "pedratesoura":
@@ -44,6 +51,7 @@ function computerPlay() {
         }
     }
 
+/* on click */
 function humanPlay(param) {
     document.querySelector(".resultado").innerHTML = param;
     computerPlay();
@@ -57,4 +65,26 @@ function humanPlay(param) {
     
     game(play);
     document.querySelector(".resultado2").innerHTML = result;
+    bo5.push(result);
+    console.log(bo5);
+    if (bo5.length >= 5) {
+
+        for(let i = 0; i < bo5.length; ++i){
+            if(bo5[i] == "VITORIA DO JOGADOR")
+            playerWin++;
+        }
+    
+        for(let i = 0; i < bo5.length; ++i){
+            if(bo5[i] == "VITORIA DO COMPUTADOR")
+            computerWin++;
+        }
+
+        if (computerWin > playerWin) {
+            document.querySelector("footer").innerHTML = "VITORIA DO COMPUTADOR"
+        } else if (playerWin> computerWin) {
+            document.querySelector("footer").innerHTML = "VITORIA DO JOGADOR"
+        } else if (playerWin == computerWin) {
+            document.querySelector("footer").innerHTML = "EMPATE"
+        }
+    }
 }
