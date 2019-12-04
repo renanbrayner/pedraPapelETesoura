@@ -125,9 +125,23 @@ li {
 }
 
 /* Footer */
+.play {
+    display: flex;
+    justify-content: space-around;
+}
 
-footer .container {
-    text-align: center;
-    color: red;
-    background: black;
+.player {
+    background: url(/images/player.png) no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 200px;
+    height: 200px;
+}
+
+.computer {
+    background: url(/images/computador.png);
+    background-size: contain;
+    background-position: center;
+    width: 200px;
+    height: 200px;
 }
