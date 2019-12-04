@@ -53,10 +53,24 @@ function computerPlay() {
 
 /* on click */
 function humanPlay(param) {
-    document.querySelector(".resultado").innerHTML = param;
     computerPlay();
+    if (computer == "papel") {
+
+    } else if (computer == "tesoura") {
+        
+    } else if (computer == "pedra") {
+
+    }
+
+    if (param = "papel") {
+
+    } else if (param = "tesoura") {
+        
+    } else if (param = "pedra") {
+        
+    }
+
     console.log(computer);
-    document.querySelector(".resultado3").innerHTML = computer;
     player = param;
     console.log(param);
     
@@ -64,27 +78,34 @@ function humanPlay(param) {
     console.log(play);
     
     game(play);
-    document.querySelector(".resultado2").innerHTML = result;
     bo5.push(result);
     console.log(bo5);
+    
+    playerWin = 0;
+    computerWin = 0;
+// conta quantas vitorias cada um teve
+    for(let i = 0; i < bo5.length; ++i){
+        if(bo5[i] == "VITORIA DO JOGADOR")
+        playerWin++;
+    }
+    
+    for(let i = 0; i < bo5.length; ++i){
+        if(bo5[i] == "VITORIA DO COMPUTADOR")
+        computerWin++;
+    }
+
+    document.querySelector(".player-score").innerHTML = playerWin;
+    document.querySelector(".computer-score").innerHTML = computerWin;
+
+    // define ganhador melhor de 5
     if (bo5.length >= 5) {
 
-        for(let i = 0; i < bo5.length; ++i){
-            if(bo5[i] == "VITORIA DO JOGADOR")
-            playerWin++;
-        }
-    
-        for(let i = 0; i < bo5.length; ++i){
-            if(bo5[i] == "VITORIA DO COMPUTADOR")
-            computerWin++;
-        }
-
-        if (computerWin > playerWin) {
-            document.querySelector("footer").innerHTML = "VITORIA DO COMPUTADOR"
+       if (computerWin > playerWin) {
+           console.log('computador');
         } else if (playerWin> computerWin) {
-            document.querySelector("footer").innerHTML = "VITORIA DO JOGADOR"
+            console.log('player');
         } else if (playerWin == computerWin) {
-            document.querySelector("footer").innerHTML = "EMPATE"
-        }
+            console.log('empada');
+       }
     }
 }

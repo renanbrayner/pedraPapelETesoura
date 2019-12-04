@@ -138,10 +138,25 @@ li {
     height: 200px;
 }
 
+.vs {
+    background: url(/images/vs.png) no-repeat;
+    background-size: contain;
+    width: 160px;
+    height: 160px;
+}
+
 .computer {
     background: url(/images/computador.png);
     background-size: contain;
     background-position: center;
     width: 200px;
     height: 200px;
+}
+
+.computer-score {
+    color: white;
+}
+
+.player-score {
+    color: white;
 }

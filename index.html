@@ -15,6 +15,21 @@
     </header>
     <main>
         <div class="container">
+            <div class="play">
+                <div class="player">
+                    <div class="player-play"></div>
+                </div>
+                <div class="player-score">0</div>
+                <div class="vs"></div>
+                <div class="computer-score">0</div>
+                <div class="computer">
+                    <div class="computer-play"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
             <ul>
                 <li class="pedra-background" onclick="humanPlay('pedra')"><div class="pedra" ></div></li>
                 <li class="papel-background" onclick="humanPlay('papel')"><div class="papel" ></div></li>
@@ -25,15 +40,6 @@
                 <li class="btn"></li>
                 <li class="btn"></li>
             </ul>
-        </div>
-    </main>
-    <footer>
-        <div class="container">
-            <div class="play">
-                <div class="player"></div>
-                <div class="vs"></div>
-                <div class="computer"></div>
-            </div>
         </div>
     </footer>
     <script src="main.js"></script>
