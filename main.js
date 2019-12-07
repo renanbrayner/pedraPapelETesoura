@@ -103,15 +103,15 @@ function humanPlay(param) {
     document.querySelector(".player-score").innerHTML = playerWin;
     document.querySelector(".computer-score").innerHTML = computerWin;
 
-    // define ganhador melhor de 5
-    // if (bo5.length >= 5) {
+    //define ganhador melhor de 5
+    if (bo5.length >= 5) {
 
-    //     if (computerWin > playerWin) {
-    //         document.querySelector(".play").innerHTML = ;
-    //     } else if (playerWin> computerWin) {
-    //         document.querySelector(".play").innerHTML = ;
-    //     } else if (playerWin == computerWin) {
-    //         document.querySelector(".play").innerHTML = ;
-    //    }
-    // }
+        if (computerWin > playerWin) {
+            document.querySelector("#change").innerHTML = "<h1>VITÓRIA DO COMPUTADOR<h1>";
+        } else if (playerWin> computerWin) {
+             document.querySelector("#change").innerHTML = "<h1>VITÓRIA DO JOGADOR<h1>";
+        } else if (playerWin == computerWin) {
+             document.querySelector("#change").innerHTML = "EMPATE";
+        }
+    }
 }
