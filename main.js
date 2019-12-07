@@ -6,6 +6,8 @@ let result;
 let bo5 = [];
 let computerWin = 0;
 let playerWin = 0;
+let jogadaComputador = document.querySelector("#computerPlay");
+let jogadaJogador = document.querySelector("#playerPlay");
 
 /* Randomizer */
 function computerPlay() {
@@ -54,20 +56,24 @@ function computerPlay() {
 /* on click */
 function humanPlay(param) {
     computerPlay();
+    //remove as jogadas anteriories
+    jogadaComputador.className = ' ';
+    jogadaJogador.className = ' ';
+
     if (computer == "papel") {
-
+        jogadaComputador.className = 'papelbg';
     } else if (computer == "tesoura") {
-        
+        jogadaComputador.className = 'tesourabg';
     } else if (computer == "pedra") {
-
+        jogadaComputador.className = 'pedrabg';
     }
 
-    if (param = "papel") {
-
-    } else if (param = "tesoura") {
-        
-    } else if (param = "pedra") {
-        
+    if (param == "pedra") {
+        jogadaJogador.className = 'pedrabg';
+    } else if (param == "tesoura") {
+        jogadaJogador.className = 'tesourabg';
+    } else if (param == "papel") {
+        jogadaJogador.className = 'papelbg';
     }
 
     console.log(computer);
@@ -83,7 +89,7 @@ function humanPlay(param) {
     
     playerWin = 0;
     computerWin = 0;
-// conta quantas vitorias cada um teve
+    // conta quantas vitorias cada um teve
     for(let i = 0; i < bo5.length; ++i){
         if(bo5[i] == "VITORIA DO JOGADOR")
         playerWin++;
@@ -98,14 +104,14 @@ function humanPlay(param) {
     document.querySelector(".computer-score").innerHTML = computerWin;
 
     // define ganhador melhor de 5
-    if (bo5.length >= 5) {
+    // if (bo5.length >= 5) {
 
-       if (computerWin > playerWin) {
-           console.log('computador');
-        } else if (playerWin> computerWin) {
-            console.log('player');
-        } else if (playerWin == computerWin) {
-            console.log('empada');
-       }
-    }
+    //     if (computerWin > playerWin) {
+    //         document.querySelector(".play").innerHTML = ;
+    //     } else if (playerWin> computerWin) {
+    //         document.querySelector(".play").innerHTML = ;
+    //     } else if (playerWin == computerWin) {
+    //         document.querySelector(".play").innerHTML = ;
+    //    }
+    // }
 }
