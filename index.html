@@ -9,40 +9,33 @@
     <link rel="shortcut icon" href="favicon.ico"/>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <div class="titulo"></div>
-        </div>
-    </header>
-    <main>
-        <div class="container">
-            <div class="play">
-                <div class="player">
-                    <div id="playerPlay" class="teste"></div>
-                </div>
-                <div class="player-score">0</div>
-                <div class="vs"></div>
-                <div class="computer-score">0</div>
-                <div class="computer">
-                    <div id="computerPlay" class="teste"></div>
-                </div>
-            </div>
-        </div>
-    </main>
-    <footer>
-        <div class="container" id="change">
-            <ul>
-                <li class="pedra-background" onclick="humanPlay('pedra')"><div class="pedra" ></div></li>
-                <li class="papel-background" onclick="humanPlay('papel')"><div class="papel" ></div></li>
-                <li class="tesoura-background" onclick="humanPlay('tesoura')"><div class="tesoura" ></div></li>
-            </ul>
-            <ul>
-                <li class="btn"></li>
-                <li class="btn"></li>
-                <li class="btn"></li>
-            </ul>
-        </div>
-    </footer>
+    <div class='container'>
+      <section class='branding'>
+        <div class='title'/>
+      </section>  
+
+      <ul class='score'>
+        <li class='player'>
+          <div id='playerPlay' />
+        </li>
+        <li class='player-score'>0</li>
+        <li class='vs' />
+        <li class="computer-score">0</li>
+        <li class="computer">
+          <div id='computerPlay' />
+        </li>
+      </ul>
+
+      <section class='buttons'>
+        <div id="change">
+          <ul>
+            <li class="pedra-background" onclick="humanPlay('pedra')"><div class="pedra" ></div></li>
+            <li class="papel-background" onclick="humanPlay('papel')"><div class="papel" ></div></li>
+            <li class="tesoura-background" onclick="humanPlay('tesoura')"><div class="tesoura" ></div></li>
+          </ul>
+        </div>       
+      </section>  
+    </div>
     <script src="main.js"></script>
 </body>
 </html>

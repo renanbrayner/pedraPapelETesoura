@@ -1,172 +1,159 @@
-/* import */
 @import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
-/* Global */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 html{
-    height: 100vh;
-    padding: 0;
-    margin: 0;
     background-image: url(images/background.gif);
     background-size: cover;
-    background-repeat: no-repeat;
 }
 
 body {
 	font-size: 62.5%;
-	margin: 0;
-	padding: 0;
-    }
+}
 
 .container {
     font-size: 1.6em;
-    padding: 2em 14em;
-    margin: 0 auto;
+    padding: 2em;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
 }
-/* "Header" */
 
-.titulo {
+.branding,
+.score,
+.buttons {
+  width: 100%;
+  height: 33%;
+}
+
+.title {
     background: url(images/PEDRA-PAPEL-E-TESOURA.png) no-repeat;
     background-size: contain;
     background-position: center;
     width: 100%;
-    height: 100px;
-    margin: 0px auto;
-    margin-top: 2em;
-}
-
-/* Main */
-
-main .container {
-    padding-top: 0;
-    padding-bottom: 0;
-
-}
-
-.play {
-    display: flex;
-    justify-content: space-around;
-    width: 80%;
-    margin: auto;
+    height: 100%;
 }
 
 .player {
     background: url(images/player.png) no-repeat;
     background-size: contain;
     background-position: center;
-    width: 200px;
-    height: 200px;
+    height: 100%;
 }
 
 .vs {
     background: url(images/vs.png) no-repeat;
     background-size: contain;
-    width: 160px;
-    height: 160px;
+    background-position: center;
+    height: 100%;
 }
 
 .computer {
     background: url(images/computador.png) no-repeat;
     background-size: contain;
     background-position: center;
-    width: 200px;
-    height: 200px;
+    height: 100%;
 }
 
 .computer-score,
 .player-score {
     font-family: 'Press Start 2P', cursive;
     color: white;
-    font-size: 3rem;
-    padding: 50px;
+    font-size: 4rem;
+    display: grid;
+    place-items: center;
+    height: 100%;
 }
 
-/* Footer */
 #change {
     font-family: 'Press Start 2P', cursive;
     color: white;
     font-size: 3rem;
-    padding: 50px;
     text-align: center;
+    height: 100%;
 }
 
 ul {
+    height: 100%;
     display: flex;
-    justify-content: space-around;
-    
+    justify-content: space-between;
     list-style-type: none;
 }
     
 li {
     height: 180px;
     width: 180px;
-    
 }
     
 .pedra {
     background: url(images/Cobblestone_Revision_6.png);
-    background-size: cover;
-    margin: 20% auto ;
-    height: 120px;
-    width: 120px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 70%;
+    width: 70%;
 }
     
 .pedra-background {
     background: url(images/unselected.png) no-repeat;
-    background-size: cover;
+    background-size: contain;
+    height: 100%;
+    display: grid;
+    place-items: center;
 }
     
 .pedra-background:hover {
     background: url(images/selected.png) no-repeat;
     background-size: contain;
-    margin-left: -10px;
-    margin-top: -10px;
-    height: 200px;
-    width: 200px;
     cursor: pointer;
 }
     
 .papel {
     background: url(images/Paper.png);
-    background-size: cover;
-    margin: 10% auto ;
-    height: 150px;
-    width: 150px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 70%;
+    width: 70%;
 }
     
 .papel-background {
     background: url(images/unselected.png) no-repeat;
-    background-size: cover;
+    background-size: contain;
+    height: 100%;
+    display: grid;
+    place-items: center;
 }
     
 .papel-background:hover {
     background: url(images/selected.png) no-repeat;
     background-size: contain;
-    margin-left: -10px;
-    margin-top: -10px;
-    height: 200px;
-    width: 200px;
     cursor: pointer;
 }
     
 .tesoura {
     background: url(images/Shears.png);
-    background-size: cover;
-    margin: 10% auto ;
-    height: 150px;
-    width: 150px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 70%;
+    width: 70%;
 }
     
 .tesoura-background {
     background: url(images/unselected.png) no-repeat;
-    background-size: cover;
+    background-size: contain;
+    height: 100%;
+    display: grid;
+    place-items: center;
 }
     
 .tesoura-background:hover {
     background: url(images/selected.png) no-repeat;
     background-size: contain;
-    margin-left: -10px;
-    margin-top: -10px;
-    height: 200px;
-    width: 200px;
     cursor: pointer;
 }
     
@@ -179,23 +166,17 @@ li {
 .pedrabg {
     background: url(images/Cobblestone_Revision_6.png) no-repeat;
     background-size: contain;
-    width: 100px;
-    height: 100px;
-    margin: 100px 0px 0px 100px;
+    height: 30%;
 }
 
 .papelbg {
     background: url(images/Paper.png) no-repeat;
     background-size: contain;
-    width: 100px;
-    height: 100px;
-    margin: 100px 0px 0px 100px;
+    height: 30%;
 }
 
 .tesourabg {
     background: url(images/Shears.png) no-repeat;
     background-size: contain;
-    width: 100px;
-    height: 100px;
-    margin: 100px 0px 0px 100px;
+    height: 30%;
 }
